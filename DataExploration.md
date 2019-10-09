@@ -34,7 +34,7 @@ This dataset contains some important parameters for phenology like Date & Time, 
 ```
 #### 3) One scatter plot of two variables, properly labeled, with a trend line added in
 
-~[](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_3.jpeg)
+![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_3.jpeg)
 ```
 > ggplot(LLNF,aes(x=Temperature,y=Intensity))+
 + geom_point()+
