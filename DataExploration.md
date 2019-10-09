@@ -7,6 +7,8 @@ This dataset contains some important parameters for phenology like Date & Time, 
 
 #### 1a) Two scatter plots of two different variables
 
+From this scatter plot we can make some comments like Intensity is increasing as the temperature increases. There are some data missing in the excel file for Intensity and Temperature for some dates.
+
 ![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_1a.jpeg)
 ```
 > library(tidyverse)
@@ -19,6 +21,9 @@ This dataset contains some important parameters for phenology like Date & Time, 
 + geom_point(color="Dark blue")
 ```
 #### 1b)
+Date Time data has not been looged properly that's why X asis does not have proper intervals. But from the Rplot we can say that Intensity is consistent for few months (June 2016-Oct 2016). There are some outliers, may be they are bad readings.
+
+**_Note_**: Date and Time should be in differnet columns so it will be easy to read them by R.
 
 ![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_1b.jpeg)
 ```
@@ -27,12 +32,18 @@ This dataset contains some important parameters for phenology like Date & Time, 
 ```
 #### 2) One scatter plot with three variables
 
+From the below Scatter plot we can suggest that through the DateTime , Intensity is consistent and Intensity has large value when temperature was above 20°C
+
 ![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_2.jpeg)
 ```
 > ggplot(LLNF,aes(x=DateTime,y=Intensity,color=Temperature))+
 + geom_point()
 ```
 #### 3) One scatter plot of two variables, properly labeled, with a trend line added in
+
+Trend line in below scatter plot is showing that intensity is proportional to Temperature. Trend line is going upwards as Intensity increases with Temperature.
+
+**_Note_**: This plot can have negative values for Temperature but as excel sheet does not contain any negative values for Temperature so thus plot.
 
 ![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_3.jpeg)
 ```
@@ -42,6 +53,8 @@ This dataset contains some important parameters for phenology like Date & Time, 
 ```
 
 #### 4) One faceted plot of two variables
+
+
 
 ![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_4.jpeg)
 ```
