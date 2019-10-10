@@ -23,9 +23,8 @@ From this scatter plot we can make some comments like Intensity is increasing as
 #### 1b)
 Date Time data has not been looged properly that's why X asis does not have proper intervals. But from the Rplot we can say that Intensity is consistent for few months (June 2016-Oct 2016). There are some outliers, may be they are bad readings.
 
-**_Note_**: Date and Time should be in differnet columns so it will be easy to read them by R.
 
-![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_1b.jpeg)
+![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_1b_1.jpeg)
 ```
 > ggplot(LLNF,aes(x=DateTime,y=Intensity))+
 + geom_point(color="Dark blue")
@@ -34,7 +33,7 @@ Date Time data has not been looged properly that's why X asis does not have prop
 
 From the below Scatter plot we can suggest that through the DateTime , Intensity is consistent and Intensity has large value when temperature was above 20°C
 
-![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_2.jpeg)
+![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_2_1.jpeg)
 ```
 > ggplot(LLNF,aes(x=DateTime,y=Intensity,color=Temperature))+
 + geom_point()
@@ -56,7 +55,7 @@ Trend line in below scatter plot is showing that intensity is proportional to Te
 
 
 
-![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_4.jpeg)
+![](https://github.com/dhwani1403/LLNF_Data/blob/master/Rplot_4_1.jpeg)
 ```
 > LLNF1<-gather(LLNF,key="measure",value="value",c(Intensity,DateTime))
 > ggplot(LLNF1,aes(x=Temperature,y=value))+
