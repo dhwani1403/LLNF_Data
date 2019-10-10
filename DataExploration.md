@@ -13,7 +13,7 @@ From this scatter plot we can make some comments like Intensity is increasing as
 ```
 > library(tidyverse)
 > library(ggplot2)
-> LLNF <- read.csv("Site_A_LLNF.csv", header = TRUE)
+> LLNF <- read.csv("Site_H.csv", header = TRUE)
 > colnames(LLNF)
 > names(LLNF)[names(LLNF) == "Date.Time..GMT.04.00"] <- "DateTime"
 > names(LLNF)[names(LLNF) == "Temp..Â.C..LGR.S.N..10638853..SEN.S.N..10638853."] <- "Temperature"
@@ -67,7 +67,7 @@ From the below plot we can observe two different varibales in two different wind
 > ggplot(LLNF1,aes(x=DateTime,y=value))+
 + geom_point()+
 + facet_wrap(~measure)+
-+ theme_bw())
++ theme_bw()
 ```
 ---
 #### 5) One bar chart
